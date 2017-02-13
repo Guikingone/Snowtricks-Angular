@@ -33,6 +33,7 @@ module.exports = function (config) {
               : ['progress'],
     port: 9876,
     colors: true,
+      
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome'],
