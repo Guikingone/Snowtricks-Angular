@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 
 export class RegisterComponent {
-    title = 'Snowtricks power !';
+
 }
