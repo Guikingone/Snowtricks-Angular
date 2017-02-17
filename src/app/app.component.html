@@ -1,21 +1,23 @@
-<nav>
-  <ul>
-    <li>
-      <a routerLink="/home" routerLinkActive="active">Home</a>
-    </li>
-    <li>
-      <a routerLink="/tricks" routerLinkActive="active">Tricks</a>
-    </li>
-    <li>
-      <a routerLink="/register" routerLinkActive="active">Register</a>
-    </li>
-    <li>
-      <a routerLink="/login" routerLinkActive="active">Login</a>
-    </li>
-  </ul>
-</nav>
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell-12">
+<div class="top-bar">
+  <nav>
+    <ul>
+      <li>
+        <a routerLink="/home" routerLinkActive="active">Home</a>
+      </li>
+      <li>
+        <a routerLink="/tricks" routerLinkActive="active">Tricks</a>
+      </li>
+      <li>
+        <a routerLink="/register" routerLinkActive="active">Register</a>
+      </li>
+      <li>
+        <a routerLink="/login" routerLinkActive="active">Login</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<div class="row">
+  <div class="small-12 medium-12 large-12">
     <router-outlet></router-outlet>
   </div>
 </div>

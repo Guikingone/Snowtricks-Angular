@@ -1,3 +1,9 @@
 <p>Here is the tricks we've saved.</p>
 
-<button routerLink="/tricks/new" routerLinkActive="active">Ajouter un tricks</button>
+<ul>
+    <li *ngFor="let trick of tricks"> {{ trick.name }}</li>
+</ul>
+
+<button class="button secondary" routerLink="/tricks/new" routerLinkActive="active">
+    Ajouter un tricks
+</button>

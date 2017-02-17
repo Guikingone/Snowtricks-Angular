@@ -1,29 +1,23 @@
-<div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--12-col">
+<div class="row">
+    <div class="small-12 medium-12 large-12 columns">
         <form>
-            <div class="mdl-textfield mdl-js-textfield">
-                <label for="email" class="mdl-textfield__label">email</label>
-                <input type="email" class="mdl-textfield__input" id="email" required
-                       name="email" #registerEmail />
-            </div>
-            <div class="mdl-textfield mdl-js-textfield">
-                <label for="username" class="mdl-textfield__label">username</label>
-                <input type="text" class="mdl-textfield__input" id="username" required
-                       name="username" #registerUsername />
-            </div>
-            <div class="mdl-textfield mdl-js-textfield">
-                <label for="password" class="mdl-textfield__label">password</label>
-                <input type="password" class="mdl-textfield__input" id="password" required
-                       name="password" #registerPassword />
-            </div>
-            <button type="submit"
-                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+            <label for="email">Adresse email</label>
+            <input type="email" id="email" required name="email" #registerEmail />
+            <label for="username">Pseudonyme</label>
+            <input type="text" id="username" required name="username" #registerUsername />
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" required name="password" #registerPassword />
+            <label for="passowrd_secondary">Mot de passe (à répéter)</label>
+            <input type="password" id="passowrd_secondary" required
+                   name="password_secondary" #registerPasswordSecondary />
+            <button type="submit" class="button secondary"
                     (click)="register(
                         registerEmail.value,
                         registerUsername.value,
-                        registerPassword.value
+                        registerPassword.value,
+                        registerPasswordSecondary.value
                     )">
-                Submit
+                Créer un compte
             </button>
         </form>
     </div>

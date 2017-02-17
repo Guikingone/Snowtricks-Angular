@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {LoginService} from "../Services/login.services";
 
 @Component({
     selector: 'app-login',
@@ -6,6 +7,14 @@ import { Component } from '@angular/core';
     styleUrls: ['../Assets/login.component.css']
 })
 
-export class LoginComponent {
-    title = 'Snowtricks power !';
+export class LoginComponent implements OnInit {
+
+    constructor(private login: LoginService) {}
+
+    ngOnInit(): void {
+    }
+
+    Login() {
+
+    }
 }

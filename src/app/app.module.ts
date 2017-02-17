@@ -17,6 +17,11 @@ import { NotFoundComponent } from "./NotFound/Action/notFound.component";
 // Routing component
 import { AppRoutingModule } from "./Routing/app-routing.component";
 
+// Services
+import { TricksService } from "./Tricks/Services/tricks.service";
+import { RegisterService } from "./Register/Services/register.service";
+import { LoginService } from "./Login/Services/login.services";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +41,11 @@ import { AppRoutingModule } from "./Routing/app-routing.component";
     JsonpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+      TricksService,
+      RegisterService,
+      LoginService
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

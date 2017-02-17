@@ -1,1 +1,23 @@
-<p>You're gonna been logged !</p>
+<div class="row">
+    <div class="small-12 medium-12 large-12 columns">
+        <form>
+            <label for="email">Adresse email</label>
+            <input type="email" id="email" required
+                   name="email" #registerEmail />
+            <label for="username">Pseudonyme</label>
+            <input type="text" id="username" required
+                   name="username" #registerUsername />
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" required
+                   name="password" #registerPassword />
+            <button type="submit" class="button secondary"
+                    (click)="Login(
+                        registerEmail.value,
+                        registerUsername.value,
+                        registerPassword.value
+                    )">
+                Se connecter
+            </button>
+        </form>
+    </div>
+</div>
