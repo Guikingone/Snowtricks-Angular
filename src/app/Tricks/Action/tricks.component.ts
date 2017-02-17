@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-tricks',
-    templateUrl: './tricks.component.html',
-    styleUrls: ['./tricks.component.css']
+    templateUrl: '../View/tricks.component.html',
+    styleUrls: ['../assets/tricks.component.css']
 })
 
 export class TricksComponent {

@@ -1,21 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, JsonpModule } from '@angular/http';
 
 // Components
 import { AppComponent } from './app.component';
 import { HomeComponent } from "./Home/home.component";
-import { TricksComponent } from "./Tricks/tricks.component";
-import { RegisterComponent } from "./Register/register.component";
+import { TricksComponent } from "./Tricks/Action/tricks.component";
+import { RegisterComponent } from "./Register/Action/register.component";
 import { NewTricksComponent } from "./Tricks/Action/newTricks.component";
-import { LoginComponent } from "./Login/login.component";
+import { LoginComponent } from "./Login/Action/login.component";
 
 // Errors components
-import { NotFoundComponent } from "./NotFound/notFound.component";
+import { NotFoundComponent } from "./NotFound/Action/notFound.component";
 
 // Routing component
-import { AppRoutingModule } from "./app-routing.component";
+import { AppRoutingModule } from "./Routing/app-routing.component";
 
 @NgModule({
   declarations: [
@@ -33,6 +33,7 @@ import { AppRoutingModule } from "./app-routing.component";
     BrowserModule,
     FormsModule,
     HttpModule,
+    JsonpModule,
     AppRoutingModule
   ],
   providers: [],

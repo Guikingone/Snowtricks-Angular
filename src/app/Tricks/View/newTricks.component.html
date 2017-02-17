@@ -1,0 +1,36 @@
+<div class="container">
+    <h1>Tricks Form</h1>
+    <form>
+        <div class="mdl-textfield mdl-js-textfield">
+            <label for="name" class="mdl-textfield__label">name</label>
+            <input type="text" class="mdl-textfield__input" id="name" required
+                   [(ngModel)]="name" name="name"/>
+        </div>
+        <label for="groups">Groups</label>
+        <select class="form-control" id="groups" required name="group">
+            <option *ngFor="let group of groups" [value]="group">{{ group }}</option>
+        </select>
+        <label for="resume">Groups</label>
+        <textarea type="text" class="form-control" id="resume"
+                  [(ngModel)]="resume" name="resume">
+        </textarea>
+        <label for="images">Images (Optional)</label>
+        <input type="text" class="form-control" id="images">
+        <label for="videos">Videos (Optional)</label>
+        <input type="text" class="form-control" id="videos">
+        <button type="submit"
+                class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                (click)="newTricks(name, group, resume)">
+            Submit
+        </button>
+    </form>
+</div>
+
+<p>
+    Seems like you try to add a tricks called :
+</p>
+<p>
+    {{ name }}
+</p>
+<p>With the resume : </p>
+<p>{{ resume }}</p>

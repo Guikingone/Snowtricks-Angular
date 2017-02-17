@@ -1,0 +1,30 @@
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+        <form>
+            <div class="mdl-textfield mdl-js-textfield">
+                <label for="email" class="mdl-textfield__label">email</label>
+                <input type="email" class="mdl-textfield__input" id="email" required
+                       name="email" #registerEmail />
+            </div>
+            <div class="mdl-textfield mdl-js-textfield">
+                <label for="username" class="mdl-textfield__label">username</label>
+                <input type="text" class="mdl-textfield__input" id="username" required
+                       name="username" #registerUsername />
+            </div>
+            <div class="mdl-textfield mdl-js-textfield">
+                <label for="password" class="mdl-textfield__label">password</label>
+                <input type="password" class="mdl-textfield__input" id="password" required
+                       name="password" #registerPassword />
+            </div>
+            <button type="submit"
+                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                    (click)="register(
+                        registerEmail.value,
+                        registerUsername.value,
+                        registerPassword.value
+                    )">
+                Submit
+            </button>
+        </form>
+    </div>
+</div>
