@@ -1,16 +1,26 @@
-<div class="row">
-    <div class="small-12 medium-12 large-12 columns">
-        <form>
-            <label for="email">Adresse email</label>
-            <input type="email" id="email" required
-                   name="email" #registerEmail />
-            <label for="username">Pseudonyme</label>
-            <input type="text" id="username" required
-                   name="username" #registerUsername />
-            <label for="password">Mot de passe</label>
-            <input type="password" id="password" required
-                   name="password" #registerPassword />
-            <button type="submit" class="button secondary"
+<div class="mdl-grid">
+    <div class="mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--12-col-desktop">
+        <div class="mdl-cell--2-offset-phone mdl-cell-1-col-phone mdl-cell-middle">
+            <i class="material-icons md-48">person</i>
+        </div>
+        <form class="mdl-cell--1-offset-phone mdl-cell--2-col-phone">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <label class="mdl-textfield__label" for="email">Adresse email</label>
+                <input class="mdl-textfield__input" type="email" id="email" required
+                       name="email" #registerEmail />
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <label class="mdl-textfield__label" for="username">Pseudonyme</label>
+                <input class="mdl-textfield__input" type="text" id="username" required
+                       name="username" #registerUsername />
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <label class="mdl-textfield__label" for="password">Mot de passe</label>
+                <input class="mdl-textfield__input" type="password" id="password" required
+                       name="password" #registerPassword />
+            </div>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                    type="submit"
                     (click)="Login(
                         registerEmail.value,
                         registerUsername.value,

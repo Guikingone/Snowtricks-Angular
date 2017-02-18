@@ -1,9 +1,13 @@
-<p>Here is the tricks we've saved.</p>
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--4-col-phone">
+        <p>Here is the tricks we've saved.</p>
 
-<ul>
-    <li *ngFor="let trick of tricks"> {{ trick.name }}</li>
-</ul>
+        <ul>
+            <li *ngFor="let trick of tricks"> {{ trick.name }}</li>
+        </ul>
 
-<button class="button secondary" routerLink="/tricks/new" routerLinkActive="active">
-    Ajouter un tricks
-</button>
+        <button class="button secondary" routerLink="/tricks/new" routerLinkActive="active">
+            Ajouter un tricks
+        </button>
+    </div>
+</div>

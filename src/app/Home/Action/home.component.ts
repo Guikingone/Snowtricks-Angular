@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-home',
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.css']
+    templateUrl: '../View/home.component.html',
+    styleUrls: ['../Assets/home.component.css']
 })
 
 export class HomeComponent {
-    title = 'Snowtricks power !';
+
 }
