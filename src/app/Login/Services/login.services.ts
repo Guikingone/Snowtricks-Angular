@@ -5,19 +5,11 @@ import { Http } from "@angular/http";
 export class LoginService {
 
     /** @type {string} */
-    apiUrl: string = '';
+    apiUrl: string = 'http://localhost:8000/api/login';
 
     /**
      * LoginService constructor
      * @param http
      */
     constructor(private http: Http) {}
-
-    /**
-     * @returns {Observable<Response>}
-     * @constructor
-     */
-    Login() {
-        return this.http.post(this.apiUrl)
-    }
 }

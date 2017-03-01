@@ -23,6 +23,7 @@ import { TricksService } from "./Tricks/Services/tricks.service";
 import { CommunityService } from "./Community/Services/community.service";
 import { RegisterService } from "./Register/Services/register.service";
 import { LoginService } from "./Login/Services/login.services";
+import { HomeService } from "./Home/Services/home.service";
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { LoginService } from "./Login/Services/login.services";
     AppRoutingModule
   ],
   providers: [
+      HomeService,
       TricksService,
       CommunityService,
       RegisterService,
