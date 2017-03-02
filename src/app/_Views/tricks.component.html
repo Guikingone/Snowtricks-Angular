@@ -1,0 +1,14 @@
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--4-col-phone">
+        <button class="button secondary" routerLink="/tricks/new" routerLinkActive="active">
+            Ajouter un tricks
+        </button>
+        <p>Here is the tricks we've saved.</p>
+        <div *ngFor="let trick of tricks">
+            <div>
+                <a class="text-center" routerLinkActive="active" routerLink="trick/:id">{{ trick.name }}</a>
+                <p class="text-center">{{ trick.resume }}</p>
+            </div>
+        </div>
+    </div>
+</div>

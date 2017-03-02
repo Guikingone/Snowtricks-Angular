@@ -1,10 +1,10 @@
 import {Component, OnInit} from "@angular/core";
-import {CommunityService} from "../Services/community.service";
+import {CommunityService} from "../_Services/community.service";
 
 @Component({
     selector: 'app-community',
-    templateUrl: '../View/community.component.html',
-    styleUrls: ['../Assets/community.component.css']
+    templateUrl: '../_Views/community.component.html',
+    styleUrls: ['../_Assets/community.component.css']
 })
 
 export class CommunityComponent implements OnInit {

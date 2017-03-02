@@ -1,0 +1,11 @@
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--4-col-phone">
+        <p>You're on the homepage !</p>
+    </div>
+    <div *ngFor="let trick of tricks">
+        <div>
+            <a class="text-center" routerLinkActive="active" routerLink="trick/:id">{{ trick.name }}</a>
+            <p class="text-center">{{ trick.resume }}</p>
+        </div>
+    </div>
+</div>

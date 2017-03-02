@@ -5,35 +5,37 @@ import { HttpModule, JsonpModule } from '@angular/http';
 
 // Main components
 import { AppComponent } from './app.component';
-import { HomeComponent } from "./Home/Action/home.component";
-import { TricksComponent } from "./Tricks/Action/tricks.component";
-import { CommunityComponent } from "./Community/Action/community.component";
-import { RegisterComponent } from "./Register/Action/register.component";
-import { NewTricksComponent } from "./Tricks/Action/newTricks.component";
-import { LoginComponent } from "./Login/Action/login.component";
+import { HomeComponent } from "./_Components/home.component";
+import { TricksComponent } from "./_Components/tricks.component";
+import { NewTricksComponent } from "./_Components/newTricks.component";
+import { TricksDetailsComponent } from "./_Components/tricks_details.component";
+import { CommunityComponent } from "./_Components/community.component";
+import { RegisterComponent } from "./_Components/register.component";
+import { LoginComponent } from "./_Components/login.component";
 
 // Errors components
-import { NotFoundComponent } from "./NotFound/Action/notFound.component";
+import { NotFoundComponent } from "./_Components/notFound.component";
 
 // Routing component
 import { AppRoutingModule } from "./_Routing/app-routing.component";
 
 // Services
-import { TricksService } from "./Tricks/Services/tricks.service";
-import { CommunityService } from "./Community/Services/community.service";
-import { RegisterService } from "./Register/Services/register.service";
-import { LoginService } from "./Login/Services/login.services";
-import { HomeService } from "./Home/Services/home.service";
+import { TricksService } from "./_Services/tricks.service";
+import { CommunityService } from "./_Services/community.service";
+import { RegisterService } from "./_Services/register.service";
+import { LoginService } from "./_Services/login.service";
+import { HomeService } from "./_Services/home.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     TricksComponent,
+    NewTricksComponent,
+    TricksDetailsComponent,
     CommunityComponent,
     RegisterComponent,
     LoginComponent,
-    NewTricksComponent,
 
     // Only for 404 purpose !
     NotFoundComponent

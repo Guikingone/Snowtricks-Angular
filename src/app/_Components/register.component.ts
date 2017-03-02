@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-import { RegisterService }  from "../Services/register.service";
+import { RegisterService }  from "../_Services/register.service";
 
 @Component({
     selector: 'app-register',
-    templateUrl: '../View/register.component.html',
-    styleUrls: ['../Assets/register.component.css']
+    templateUrl: '../_Views/register.component.html',
+    styleUrls: ['../_Assets/register.component.css']
 })
 
 export class RegisterComponent implements OnInit {
@@ -22,5 +22,8 @@ export class RegisterComponent implements OnInit {
         }
 
         this.registerService.register(email, username, password)
+                            .subscribe(
+                                data => console.log(data)
+                            );
     }
 }

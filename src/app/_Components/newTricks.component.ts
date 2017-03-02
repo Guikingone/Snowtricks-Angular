@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
-import { Tricks } from './../Model/Tricks';
+import { Tricks } from '../_Model/Tricks';
 
 @Component({
     selector: 'tricks-form',
-    templateUrl: '../View/newTricks.component.html'
+    templateUrl: '../_Views/newTricks.component.html'
 })
 
 export class NewTricksComponent {
