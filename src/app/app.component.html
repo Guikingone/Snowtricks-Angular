@@ -1,33 +1,12 @@
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">Snowtricks</span>
-      <!-- Add spacer, to align navigation to the right -->
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation. We hide it in small screens. -->
-      <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" routerLinkActive="active" routerLink="home">Home</a>
-        <a class="mdl-navigation__link" routerLinkActive="active" routerLink="/tricks">Tricks</a>
-        <a class="mdl-navigation__link" routerLinkActive="active" routerLink="/community">Community</a>
-        <a class="mdl-navigation__link" routerLinkActive="active" routerLink="/register">Register</a>
-        <a class="mdl-navigation__link" routerLinkActive="active" routerLink="/login">Login</a>
-      </nav>
-    </div>
-  </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Title</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" routerLinkActive="active" routerLink="home">Home</a>
-      <a class="mdl-navigation__link" routerLinkActive="active" routerLink="/tricks">Tricks</a>
-      <a class="mdl-navigation__link" routerLinkActive="active" routerLink="/community">Community</a>
-      <a class="mdl-navigation__link" routerLinkActive="active" routerLink="/register">Register</a>
-      <a class="mdl-navigation__link" routerLinkActive="active" routerLink="/login">Login</a>
-    </nav>
-  </div>
-  <main class="mdl-layout__content">
-    <div class="page-content">
-      <router-outlet></router-outlet>
-    </div>
-  </main>
+<div class="w3-bar">
+  <a class="w3-bar-item w3-button w3-mobile" routerLinkActive="active" routerLink="home">
+    Home
+  </a>
+  <a class="w3-bar-item w3-button w3-mobile" routerLinkActive="active" routerLink="/tricks">
+    Tricks
+  </a>
+  <a class="w3-bar-item w3-button w3-mobile" routerLinkActive="active" routerLink="/community">
+    Community
+  </a>
 </div>
+<router-outlet></router-outlet>

@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { LoginService } from "../_Services/login.service";
+import { Component } from '@angular/core';
+import { LoginService } from "../_Services/Login.service";
+import { FormBuilder, Validators, FormGroup } from "@angular/forms";
+import { Router } from "@angular/router";
 
 @Component({
     selector: 'app-login',
@@ -7,15 +9,30 @@ import { LoginService } from "../_Services/login.service";
     styleUrls: ['../_Assets/login.component.css']
 })
 
-export class LoginComponent implements OnInit {
+export class LoginComponent{
 
-    constructor(private login: LoginService) {}
+    private loginForm: FormGroup;
+    private error: string = '';
 
-    ngOnInit(): void {
-        this.Login();
+    constructor(
+        private formBuilder: FormBuilder,
+        private loginService: LoginService,
+        private router: Router
+    ) {
+        this.loginForm = formBuilder.group({
+                '_username': ['', Validators.required],
+                '_password': ['', Validators.required]
+        });
     }
 
-    Login() {
-
+    onSubmit() {
+        this.loginService.login(this.loginForm.value)
+                         .subscribe(
+                             data => {
+                                 localStorage.setItem('token', data.token);
+                                 this.router.navigate(['post']);
+                             },
+                             error => this.error = error.message
+                         );
     }
 }

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 
 // Main components
@@ -23,8 +23,10 @@ import { AppRoutingModule } from "./_Routing/app-routing.component";
 import { TricksService } from "./_Services/tricks.service";
 import { CommunityService } from "./_Services/community.service";
 import { RegisterService } from "./_Services/register.service";
-import { LoginService } from "./_Services/login.service";
+import { LoginService } from "./_Services/Login.service";
 import { HomeService } from "./_Services/home.service";
+import {TricksManager} from "./_Managers/TricksManager.service";
+import {Security} from "./_Services/Security.service";
 
 @NgModule({
   declarations: [
@@ -45,9 +47,12 @@ import { HomeService } from "./_Services/home.service";
     FormsModule,
     HttpModule,
     JsonpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
   ],
   providers: [
+      TricksManager,
+      Security,
       HomeService,
       TricksService,
       CommunityService,
