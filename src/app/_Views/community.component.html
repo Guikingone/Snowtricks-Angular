@@ -1,5 +1,26 @@
 <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--4-col-phone">
-        <p>hello World !</p>
+        <div [hidden]="!error" role="alert" class="w3-panel w3-red">
+            {{ error }}
+        </div>
+        <form  class="w3-container" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <label class="mdl-textfield__label"> Pseudonyme
+                            <input class="mdl-textfield__input" type="text" formControlName="_username"/>
+                        </label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <label class="mdl-textfield__label"> Mot de passe
+                            <input class="mdl-textfield__input" type="password" formControlName="_password" />
+                        </label>
+                    </div>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                            type="submit" [disabled]="!loginForm.valid">
+                        Se connecter
+                    </button>
+        </form>
+        <a routerLinkActive="active" routerLink="/forgot-password">
+            Mot de passe oublié ?
+        </a>
     </div>
 </div>

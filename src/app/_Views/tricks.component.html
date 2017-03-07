@@ -1,8 +1,5 @@
 <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--4-col-phone">
-        <button class="button secondary" routerLink="/tricks/new" routerLinkActive="active">
-            Ajouter un tricks
-        </button>
         <p>Here is the tricks we've saved.</p>
         <div *ngFor="let trick of tricks">
             <div>
@@ -10,5 +7,9 @@
                 <p class="text-center">{{ trick.resume }}</p>
             </div>
         </div>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                routerLink="/tricks/new" routerLinkActive="active">
+            Ajouter un tricks
+        </button>
     </div>
 </div>
