@@ -1,0 +1,32 @@
+stages:
+  - test
+  - performances
+  - build
+  - frontend
+  - deploy
+
+test:
+    stage: test
+    image: guikingone/test-env
+    script:
+        - phpunit -v
+        - echo "performances tests"
+
+performances:
+   stage: performances
+   image: guikingone/test-env
+   script:
+       - phpunit -v
+       - echo "performances tests"
+
+build:
+  stage: build
+  script: echo "Building the app"
+
+frontend:
+  stage: frontend
+  script: echo "Frontend check"
+
+deploy_staging:
+  stage: deploy
+  script: echo "Deploy to staging server"

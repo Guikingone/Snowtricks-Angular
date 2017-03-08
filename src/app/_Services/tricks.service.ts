@@ -15,4 +15,8 @@ export class TricksService {
                             (response: Response) => response.json()
                         );
     }
+
+    postTricks() {
+
+    }
 }
