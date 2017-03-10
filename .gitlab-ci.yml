@@ -10,8 +10,7 @@ test:
     image: mkenney/npm
     script:
         - npm install
-        - npm update
-        - ng test
+        # - ng test
         - echo "performances tests"
 
 performances:
@@ -30,4 +29,10 @@ frontend:
 
 deploy_staging:
   stage: deploy
-  script: echo "Deploy to staging server"
+  image: guikingone/front_prod_env
+  only:
+      - master
+  script:
+      - ssh-add <(echo "$DEPLOY_SERVER_KEY")
+      - ssh -p22 server_user@server_production_ip "mkdir /home/usr/$MAIN_USER/$PROJECT_NAME"
+      - echo "Deploy to staging server"
