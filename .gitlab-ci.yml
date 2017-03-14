@@ -22,8 +22,8 @@ performances:
 
 build:
   stage: build
-   before_script:
-       - npm install
+  before_script:
+      - npm install
   script: echo "Building the app"
 
 deploy_staging:
