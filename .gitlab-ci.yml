@@ -2,37 +2,41 @@ stages:
   - test
   - performances
   - build
-  - frontend
   - deploy
 
 test:
     stage: test
-    image: mkenney/npm
-    script:
+    image: guikingone/front_env
+    before_script:
         - npm install
-        # - ng test
+    script:
         - echo "performances tests"
 
 performances:
    stage: performances
-   image: mkenney/npm
+   image: guikingone/front_env
+   before_script:
+       - npm install
    script:
        - echo "performances tests"
 
 build:
   stage: build
+   before_script:
+       - npm install
   script: echo "Building the app"
-
-frontend:
-  stage: frontend
-  script: echo "Frontend check"
 
 deploy_staging:
   stage: deploy
-  image: guikingone/front_prod_env
+  image: guikingone/front_env
   only:
       - master
+  before_script:
+      - mkdir -p ~/.ssh
+      - eval $(ssh-agent -s)
+      - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+      - npm install
   script:
-      - ssh-add <(echo "$DEPLOY_SERVER_KEY")
-      - ssh -p22 server_user@server_production_ip "mkdir /home/usr/$MAIN_USER/$PROJECT_NAME"
-      - echo "Deploy to staging server"
+      - echo "Deploy to production server"
+      - ssh-add <(echo "$SERVER_AUTHENTICATION_KEY")
+      - ssh -p22 server_user@server_ip "mkdir /home/user/$SERVER_OWNER/$PROJECT_NAME"
