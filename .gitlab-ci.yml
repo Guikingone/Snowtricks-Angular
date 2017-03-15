@@ -1,7 +1,6 @@
 stages:
   - test
   - performances
-  - build
   - deploy
 
 test:
@@ -9,6 +8,7 @@ test:
     image: guikingone/front_env
     before_script:
         - npm install
+        - ng test
     script:
         - echo "performances tests"
 
@@ -26,6 +26,7 @@ deploy_staging:
   only:
       - master
   before_script:
+      - npm install
       - ng build --prod
       - mkdir -p ~/.ssh
       - eval $(ssh-agent -s)
