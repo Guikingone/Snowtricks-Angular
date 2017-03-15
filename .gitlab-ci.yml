@@ -35,7 +35,6 @@ deploy_staging:
       - mkdir -p ~/.ssh
       - eval $(ssh-agent -s)
       - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
-      - npm install
   script:
       - echo "Deploy to production server"
       - ssh-add <(echo "$SERVER_AUTHENTICATION_KEY")
