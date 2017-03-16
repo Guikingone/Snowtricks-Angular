@@ -7,7 +7,7 @@ test:
     stage: test
     image: guikingone/front_env
     before_script:
-        - npm install=
+        - npm install
     script:
         - echo "performances tests"
 
