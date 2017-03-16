@@ -27,10 +27,12 @@ import { LoginService } from "./_Services/Login.service";
 import { HomeService } from "./_Services/home.service";
 import {TricksManager} from "./_Managers/TricksManager.service";
 import {Security} from "./_Services/Security.service";
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AdminComponent,
     HomeComponent,
     TricksComponent,
     NewTricksComponent,
@@ -40,7 +42,7 @@ import {Security} from "./_Services/Security.service";
     LoginComponent,
 
     // Only for 404 purpose !
-    NotFoundComponent
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

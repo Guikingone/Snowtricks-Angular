@@ -12,6 +12,7 @@ import { LoginComponent } from "../_Components/login.component";
 
 // Errors components
 import { NotFoundComponent } from "../_Components/notFound.component";
+import { AdminComponent } from "../admin/admin.component";
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
 
     // Main component.
     { path: 'home', component: HomeComponent },
+    { path: 'admin', component: AdminComponent },
     { path: 'tricks', component: TricksComponent },
     { path: 'tricks/new', component: NewTricksComponent },
     { path: 'tricks/:id', component: TricksDetailsComponent },
