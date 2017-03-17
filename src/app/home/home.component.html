@@ -1,0 +1,17 @@
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--12-col-desktop">
+    <p>You're on the homepage !</p>
+    <div *ngFor="let trick of tricks">
+      <div class="w3-card-2 w3-dark-grey">
+        <a class="text-center" routerLinkActive="active" routerLink="trick/:name">{{ trick.name }}</a>
+        <div class="w3-center">
+          <p class="text-center">{{ trick.resume }}</p>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+            routerLinkActive="active" routerLink="/tricks">
+      En voir plus
+    </button>
+  </div>
+</div>

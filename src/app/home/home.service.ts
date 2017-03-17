@@ -1,9 +1,8 @@
 import { Injectable } from "@angular/core";
 import { Http, Response } from "@angular/http";
-import 'rxjs/add/operator/map';
 
 @Injectable()
-export class TricksService {
+export class HomeService {
 
     protected apiUrl = 'http://localhost:8000/api/tricks';
 
@@ -11,12 +10,8 @@ export class TricksService {
 
     getTricks() {
         return this.http.get(this.apiUrl)
-                        .map(
-                            (response: Response) => response.json()
-                        );
-    }
-
-    postTricks() {
-
+            .map(
+                (response: Response) => response.json()
+            );
     }
 }

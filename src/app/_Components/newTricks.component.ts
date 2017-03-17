@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Tricks } from '../_Model/Tricks';
+import { Tricks } from '../tricks/Tricks';
 
 @Component({
     selector: 'tricks-form',
